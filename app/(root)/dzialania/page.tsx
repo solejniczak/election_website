@@ -2,17 +2,34 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Search from '@/components/shared/Search';
 import Link from 'next/link';
 import data from '@/database/dzialania';
 import { Reveal } from '@/components/shared/Reveal';
 
 const Dzialania = () => {
   const [filteredData, setFilteredData] = useState(data);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+
+    const filtered = data.filter((item) =>
+      item.city.toLowerCase().includes(query.toLowerCase())
+    );
+
+    setFilteredData(filtered);
+  };
 
   return (
     <div>
       <section className="wrapper my-8 flex flex-col gap-8 md:gap-12">
-
+        <Reveal>
+          <Search
+            placeholder="Wyszukaj według miejscowości"
+            onSearch={(query) => handleSearch(query)}
+          />
+        </Reveal>
       </section>
       <div className="m-auto">
 
