@@ -17,8 +17,8 @@ const Radni = () => {
                 <Reveal>
                     <div key={radny.id} className="flex flex-row justify-between max-h-[10rem] md:max-h-[15rem] border-0 rounded-xl hover:scale-105 duration-500 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                         <div className='flex flex-col p-5 w-1/2'>
-                            <p className='h5-bold'>{radny.name}</p>
-                            <p className='p-regular-20 text-gray-200'>{radny.city}</p>
+                            <p className='p-bold-20  md:h5-bold'>{radny.name}</p>
+                            <p className='md:p-regular-20 text-gray-200'>{radny.city}</p>
                         </div>
                         <div className='w-1/2'>
                             <Image 
