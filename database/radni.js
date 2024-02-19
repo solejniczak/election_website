@@ -25,9 +25,9 @@ const radni = [
     },
     {
         "id": 5,
-        "name": "Piotr Lewandowski",
+        "name": "Piotr Malina",
         "city": "Poznań",
-        "photo": "/assets/images/radni/plewandowski.png"
+        "photo": "/assets/images/radni/pmalina.png"
     },
     {
         "id": 6,

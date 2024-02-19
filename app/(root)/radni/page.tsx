@@ -16,14 +16,14 @@ const Radni = () => {
             {radni.map((radny) => (
                 <Reveal>
                     <div key={radny.id} className="flex flex-row justify-between max-h-[10rem] md:max-h-[15rem] border-0 rounded-xl hover:scale-105 duration-500 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                        <div className='flex flex-col p-5'>
+                        <div className='flex flex-col p-5 w-1/2'>
                             <p className='h5-bold'>{radny.name}</p>
                             <p className='p-regular-20 text-gray-200'>{radny.city}</p>
                         </div>
-                        <div>
+                        <div className='w-1/2'>
                             <Image 
                                 src={radny.photo}
-                                alt="anna"
+                                alt="radny"
                                 width={500}
                                 height={1000}
                                 className="min-h-[10rem] max-h-[10rem] md:min-h-[15rem] md:max-h-[15rem] object-contain object-center p-0"
